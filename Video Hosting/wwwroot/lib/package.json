@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {
+    "foundation-sites": "6.5.3",
+    "foundation-icons": "1.0.1",
+    "jquery-validation-unobtrusive": "3.2.11",
+    "jquery-validation": "1.19.1",
+    "jquery": "3.4.1"
+  }
+}
