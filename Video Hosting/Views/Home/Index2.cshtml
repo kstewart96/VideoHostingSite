@@ -1,38 +1,14 @@
-﻿body {
-    /*background-color: #1b2838 !important;*/
-    /*background: linear-gradient(209deg, rgba(0, 0, 0, 1), rgba(27, 40, 56, 0.48));*/
-    background-color: #1b2838;
-    color: #ffffff;
-    padding: 15px !important;
-}
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-.top-bar, .top-bar ul {
-    background-color: #242424 !important;
-    border-radius: 40px;
-    padding: 10px;
-    /* padding: 5px;
-      padding-top: 5px;
-    padding-right: 5px;
-    padding-left: 5px;*/
-}
+    <link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.5.5/video.js"></script>
 
-.mainBody {
-    padding: 10px;
-}
-
-a {
-    color: #ffffff !important;
-}
-
-footer {
-    background-color: #242424 !important;
-    padding: 10px;
-    text-align: center;
-}
-
-/*Custom Css File for the Video Player*/
-
-
+    <style>
+        
 .video-js .vjs-menu-button-inline.vjs-slider-active, .video-js .vjs-menu-button-inline:focus, .video-js .vjs-menu-button-inline:hover, .video-js.vjs-no-flex .vjs-menu-button-inline {
     width: 10em;
 }
@@ -115,3 +91,16 @@ video-js.vjs-ended .vjs-big-play-button, .video-js.vjs-paused .vjs-big-play-butt
     background-color: rgba(6,0,202,0.98) !important;
 }
 
+
+    </style>
+</head>
+<body>
+    <div id="instructions">
+        <video id="my_video_1" class="video-js vjs-default-skin" width="640" height="267"
+               controls preload="none" poster='~/App_VideoThumbnail/ricochet-kills-2_dynamic_feature.jpg'
+               data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
+            <source src="~/App_VideoData/SampleVids.mp4" type='video/mp4' />
+        </video>
+    </div>
+</body>
+</html>

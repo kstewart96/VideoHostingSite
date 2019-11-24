@@ -5,4 +5,33 @@
 }
 
 <h1>Index</h1>
+@*<div>
+        <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+            <source src="~/App_VideoData/2019-11-22_14-59-36.mp4" type="video/mp4" />
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a
+                web browser that
+                <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
 
+        </video>
+    </div>*@
+@*<div id="instructions">
+        <video id="my_video_1" class="video-js vjs-default-skin" width="640" height="267"
+               controls preload="none" poster='https://sample-videos.com/img/Sample-jpg-image-50kb.jpg'
+               data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
+            <source src="https://vjs.zencdn.net/v/oceans.mp4" type='video/mp4' />
+        </video>
+    </div>*@
+
+<div id="instructions">
+    <video id="my_video_1" class="video-js vjs-default-skin" width="640" height="267"
+           controls preload="none" poster='~/App_VideoThumbnail/ricochet-kills-2_dynamic_feature.jpg'
+           data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
+        <source src="~/App_VideoData/SampleVids.mp4" type='video/mp4' />
+    </video>
+</div>
+
+
+
+<hr />

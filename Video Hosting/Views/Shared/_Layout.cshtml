@@ -7,27 +7,116 @@
     <environment include="Development">
         <link rel="stylesheet" asp-href-include="/lib/node_modules/foundation-sites/dist/**/*.min.css" asp-href-exclude="**/*-reboot*,**/*-grid*" />
         <link rel="stylesheet" asp-href-include="/lib/node_modules/foundation-icons/**/*.css" />
+
+
+        <script asp-src-include="/lib/node_modules/jquery/dist/**/*.min.js"></script>
+        <script asp-src-include="/lib/node_modules/jquery-validation/dist/**/*.validate.js"></script>
+
+        <script asp-src-include="/lib/node_modules/jquery-validation-unobtrusive/dist/**/*.js"></script>
+
+        @*<script asp-src-include="/lib/node_modules/foundation-sites/js/entries/foundation.js"></script>*@
+
+
+
+        @*<script asp-src-include="/lib/node_modules/foundation-sites/js/entries/plugins/**/*.core.js"></script>*@
+
+        @*<script asp-src-include="/lib/node_modules/foundation-sites/js/entries/plugins/**/*.core.js"></script>*@
+
+
+
         <link rel="stylesheet" href="~/css/site.css?v=11" />
-
-
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.core.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/foundation.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.dropdown.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.dropdownMenu.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.util.keyboard.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.util.box.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.util.triggers.js" defer></script>
         <script src="~/js/site.js?v=1" defer></script>
     </environment>
 
+
+    @*<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>*@
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.core.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/foundation.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.dropdown.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.dropdownMenu.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.util.keyboard.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.util.box.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.util.triggers.js" defer></script>
+
+    <link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+
+    <script src="https://vjs.zencdn.net/7.5.5/video.js"></script>
+
     <title>@ViewBag.Title</title>
+
+
 </head>
 <body>
-    <div>
+    <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+        <div class="title-bar-title">Menu</div>
+    </div>
+
+    <div class="top-bar" id="responsive-menu">
+        <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text">Videos Studio</li>
+                <li class="has-submenu">
+                    <a asp-controller="Home" asp-action="Index">One</a>
+                </li>
+                <li><a asp-controller="Home" asp-action="Index2">Two</a></li>
+                <li><a href="#0">Three</a></li>
+            </ul>
+        </div>
+
+        <div class="top-bar-right">
+
+            <ul class="menu">
+                <li>
+                    <div class="button-group no-gaps">
+                        <a class="secondary button">Upload</a>
+                        <a class="success button">Login</a>
+                    </div>
+                </li>
+                @*<li><input type="search" placeholder="Search"></li>
+                    <li><button type="button" class="button">Search</button></li>*@
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="mainBody">
         @RenderBody()
     </div>
+    <footer>
+        <div>
+            &copy; 2019 Website developed by Edwin Kaburu, etc [Add Names]..... Use of any 3rd party content on this site is for demonstration purposes only, and subject to their own privacy policy and copyright .
+        </div>
+    </footer>
+    @*<div id="viewContainer">
+
+            <div>
+                
+
+                <div">
+                    @RenderBody()
+                </div">
+
+                <hr />
+                <footer>
+                    <div>
+                        &copy; 2019 Video Hosting All rights reserved. All trademarks are property of their respective owners in the US and other countries.
+                        VAT included in all prices where applicable.
+
+                    </div>
+                </footer>
+            </div>
+
+
+
+
+        </div>*@
 </body>
 </html>
+
