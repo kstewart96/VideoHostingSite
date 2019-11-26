@@ -1,0 +1,54 @@
+﻿
+@{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+
+        string link1, link2;
+        link1 = "https://unpkg.com/@silvermine/videojs-quality-selector/dist/css/quality-selector.css";
+        link2= "https://unpkg.com/@silvermine/videojs-quality-selector/dist/js/silvermine-videojs-quality-selector.min.js";
+    }
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index3</title>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet" />
+        <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+        <script src="https://vjs.zencdn.net/7.5.5/video.js"></script>
+
+        <link href="@link1" rel="stylesheet">
+        <script src="@link2"></script>
+    </head>
+    <body>
+
+
+        <video id="video_1" class="video-js vjs-default-skin" controls preload="auto" width="640" height="268" data-setup='{}'>
+
+            @*<source src="~/App_VideoData/Test.mp4" type="video/webm" label="1080P" />
+        <source src="~/App_VideoData/Test.mp4" type="video/webm" label="720P" selected="true" />
+        <source src="~/App_VideoData/Test.mp4" type="video/webm" label="480P" />*@
+            <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ab/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm.1080p.webm" type="video/webm" label="1080P">
+            <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ab/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm.720p.webm" type="video/webm" label="720P">
+            <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ab/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm.480p.webm" type="video/webm" label="480P" selected="true">
+            <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ab/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm.360p.webm" type="video/webm" label="360P">
+            <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ab/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm.240p.webm" type="video/webm" label="240P">
+
+        </video>
+
+
+
+        <script>
+                videojs("video_1", {}, function ()
+                {
+                    var player = this;
+                    player.controlBar.addChild('QualitySelector');
+                });
+
+            </script>
+    </body>
+    </html>

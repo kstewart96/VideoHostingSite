@@ -122,3 +122,4 @@ C:\Users\EdwinPc\source\repos\Video Hosting\Video Hosting\obj\Debug\netcoreapp3.
 C:\Users\EdwinPc\source\repos\Video Hosting\Video Hosting\obj\Debug\netcoreapp3.0\Video Hosting.dll
 C:\Users\EdwinPc\source\repos\Video Hosting\Video Hosting\obj\Debug\netcoreapp3.0\Video Hosting.pdb
 C:\Users\EdwinPc\source\repos\Video Hosting\Video Hosting\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index2.cshtml.g.cs
+C:\Users\EdwinPc\source\repos\Video Hosting\Video Hosting\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index3.cshtml.g.cs

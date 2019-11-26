@@ -22,6 +22,12 @@
 
         @*<script asp-src-include="/lib/node_modules/foundation-sites/js/entries/plugins/**/*.core.js"></script>*@
 
+        <link rel="stylesheet" asp-href-include="/lib/node_modules/videojs-hls-quality-selector/dist/videojs-hls-quality-selector.css" />
+
+        <script asp-src-include="/lib/node_modules/videojs-contrib-quality-levels/dist/videojs-contrib-quality-levels.js"></script>
+
+        <link rel="stylesheet" asp-href-include="/lib/node_modules/videojs-hls-quality-selector/dist/videojs-hls-quality-selector.js" />
+
 
 
         <link rel="stylesheet" href="~/css/site.css?v=11" />
@@ -48,6 +54,9 @@
 
     <script src="https://vjs.zencdn.net/7.5.5/video.js"></script>
 
+
+
+
     <title>@ViewBag.Title</title>
 
 
@@ -66,7 +75,7 @@
                     <a asp-controller="Home" asp-action="Index">One</a>
                 </li>
                 <li><a asp-controller="Home" asp-action="Index2">Two</a></li>
-                <li><a href="#0">Three</a></li>
+                <li><a asp-controller="Home" asp-action="Index3">Three</a></li>
             </ul>
         </div>
 

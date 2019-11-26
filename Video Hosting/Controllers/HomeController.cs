@@ -16,5 +16,9 @@ namespace Video_Hosting.Controllers
         {
             return View();
         }
+        public IActionResult Index3()
+        {
+            return View();
+        }
     }
 }

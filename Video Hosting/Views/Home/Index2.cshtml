@@ -1,106 +1,13 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet" />
-    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
-    <script src="https://vjs.zencdn.net/7.5.5/video.js"></script>
-
-    <style>
-        
-.video-js .vjs-menu-button-inline.vjs-slider-active, .video-js .vjs-menu-button-inline:focus, .video-js .vjs-menu-button-inline:hover, .video-js.vjs-no-flex .vjs-menu-button-inline {
-    width: 10em;
-}
-
-.video-js .vjs-controls-disabled .vjs-big-play-button {
-    display: none !important;
-}
-
-.video-js .vjs-control {
-    width: 3em;
-}
-
-.video-js .vjs-menu-button-inline:before {
-    width: 1.5em;
-}
-
-.vjs-menu-button-inline .vjs-menu {
-    left: 3em;
-}
-
-.vjs-paused.vjs-has-started.video-js .vjs-big-play-button, .video-js.vjs-ended .vjs-big-play-button, .video-js.vjs-paused .vjs-big-play-button {
-    display: block;
-}
-
-.video-js .vjs-load-progress div, .vjs-seeking .vjs-big-play-button, .vjs-waiting .vjs-big-play-button {
-    display: none !important;
-}
-
-.video-js .vjs-mouse-display:after, .video-js .vjs-play-progress:after {
-    padding: 0 .4em .3em;
-}
-
-.video-js.vjs-ended .vjs-loading-spinner {
-    display: none;
-}
-
-.video-js.vjs-ended .vjs-big-play-button {
-    display: block !important;
-}
-
-video-js.vjs-ended .vjs-big-play-button, .video-js.vjs-paused .vjs-big-play-button, .vjs-paused.vjs-has-started.video-js .vjs-big-play-button {
-    display: block;
-}
-
-.video-js .vjs-big-play-button {
-    top: 50% !important;
-    left: 50% !important;
-    margin-left: -1.5em !important;
-    margin-top: -1em !important
-}
-
-.video-js .vjs-big-play-button {
-    background-color: rgba(255,154,0,0.72);
-    font-size: 5em;
-    border-radius: 6%;
-    height: 1.6em !important;
-    line-height: 1.6em !important;
-    margin-top: -0.8em !important
-}
-
-    .video-js:hover .vjs-big-play-button, .video-js .vjs-big-play-button:focus, .video-js .vjs-big-play-button:active {
-        background-color: rgba(96,219,0,0.32) !important;
-    }
-
-.video-js .vjs-loading-spinner {
-    border-color: rgba(0,79,240,0.96) !important;
-}
-
-.video-js .vjs-control-bar2 {
-    background-color: #1cdc00;
-}
-
-.video-js .vjs-control-bar {
-    background-color: rgba(28,220,0,0) !important;
-    color: #ffffff;
-    font-size: 15px;
-}
-
-.video-js .vjs-play-progress, .video-js .vjs-volume-level {
-    background-color: rgba(6,0,202,0.98) !important;
-}
+﻿
+<video id="videojs-http-source-selector-player" width="640" height="267" class="video-js vjs-default-skin" controls>
+    <source src="https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8" type='application/x-mpegURL'>
+</video>
 
 
-    </style>
-</head>
-<body>
-    <div id="instructions">
-        <video id="my_video_1" class="video-js vjs-default-skin" width="640" height="267"
-               controls preload="none" poster='~/App_VideoThumbnail/ricochet-kills-2_dynamic_feature.jpg'
-               data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
-            <source src="~/App_VideoData/SampleVids.mp4" type='video/mp4' />
-        </video>
-    </div>
-</body>
-</html>
+<script>
+    (function (window, videojs) {
+        var player = window.player = videojs('videojs-http-source-selector-player');
+        player.httpSourceSelector();
+    }(window, window.videojs));
+
+</script>
